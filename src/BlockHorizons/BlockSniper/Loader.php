@@ -58,9 +58,7 @@ class Loader extends PluginBase {
 
 		$this->presetManager = new PresetManager($this);
 		$this->brushManager = new BrushManager($this);
-
-		$this->undoStorer = new UndoStorer($this);
-		$this->cloneStorer = new CloneStorer($this);
+        $this->cloneStorer = new CloneStorer($this);
 
 		if(!is_dir($this->getDataFolder())) {
 			mkdir($this->getDataFolder());
